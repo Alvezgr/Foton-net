@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Platzigram</title>
@@ -12,10 +13,10 @@
                     <div class="media">
                         <img class="mr-3 rounded-circle" src="{{ post.user.picture }}" alt="{{ post.user.name }}"/>
                         <div class="media-body">
-                            <h5 class="mt-0">{{ post.user.name }}</h5>
+                            <h5 class="mt-0">{{ post.user.name }}</h5> 
                             {{ post.timestamp }}
-                        </div>                       
-                    </div>
+                        </div>
+                      </div>
                     <img class="img-fluid mt-3 border rounded" src="{{ post.photo }}" alt="{{ post.title }}">
                     <h6 class="ml-1 mt-1">{{ post.title }}</h6>
                     <p class="ml-1 mt-1">Everything is blank here!</p>
@@ -25,4 +26,3 @@
         </div>
     </body>
 </html>
-
