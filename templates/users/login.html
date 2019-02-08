@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% block container %}
+<form method="POST" action="{% url 'users:login' %}">
+        {% csrf_token %}
+        {% if forms.errors %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Oh snap!</strong> Your username or password didn't match!
+            </div>
+        {% endif %}
+        <fieldset class="form-group">
+            <input type="text" name="username" class="form-control"  placeholder="Username">
+        </fieldset>
+        <fieldset class="form-group">
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </fieldset>
+        <button type="submit" class="btn btn-primary btn-block mt-5">Sign in!</button>
+        <p class="mt-4">Don't have and account yet? <a href="{% url 'users:signup' %}">Sign up here.</a></p>
+    </form>
+{% endblock %}
