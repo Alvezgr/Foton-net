@@ -1,6 +1,6 @@
-{% extends './base.html' %}
+{% extends 'base.html' %}
 
-{% block container %}
+{% block content %}
 <form method="POST" action="{% url 'users:login' %}">
         {% csrf_token %}
         {% if forms.errors %}

@@ -21,7 +21,7 @@ class UserDetailView(LoginRequiredMixin, DetailView):
     template_name = 'users/detail.html'
     slug_field = 'username'
     slug_url_kwarg = 'username'
-    queryset = User.objects.all() 
+    queryset = User.objects.all()
     context_object_name = 'user'
     def get_context_data(self, **kwargs):
         """Add users post to context"""
@@ -35,7 +35,7 @@ class LoginView(auth_views.LoginView):
     """Login VIew"""
     template_name = 'users/login.html'
     redirect_authenticated_user = True
-    
+
 class LogoutView(LoginRequiredMixin, auth_views.LogoutView):
     """Log out from the platform"""
     template_name = 'users/login.html'
