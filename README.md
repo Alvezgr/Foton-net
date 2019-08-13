@@ -1,2 +1,3 @@
-# instagram-simple-clone
-This is a super simple instagram clone using Django web framework, was a project for the course of django in Platzi.com
+# Social Net for faculty
+this is a private social net for uploading images and manage users
+
